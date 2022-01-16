@@ -7,12 +7,12 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/divisor"
+        android:id="@+id/number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:ems="10"
-        android:hint="@string/divisor"
+        android:hint="@string/number"
         android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,17 +21,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/dividend"
-        android:hint="@string/dividend"
+        android:id="@+id/mod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="136dp"
         android:ems="10"
+        android:hint="@string/mod"
         android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/divisor"
+        app:layout_constraintEnd_toEndOf="@+id/number"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/divisor"
-        app:layout_constraintTop_toBottomOf="@+id/divisor" />
+        app:layout_constraintStart_toStartOf="@+id/number"
+        app:layout_constraintTop_toBottomOf="@+id/number" />
 
     <Button
         android:id="@+id/result"
@@ -40,7 +40,7 @@
         android:layout_marginBottom="100dp"
         android:text="@string/calculate"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/dividend"
+        app:layout_constraintEnd_toEndOf="@+id/mod"
         app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="@+id/dividend" />
+        app:layout_constraintStart_toStartOf="@+id/mod" />
 </androidx.constraintlayout.widget.ConstraintLayout>

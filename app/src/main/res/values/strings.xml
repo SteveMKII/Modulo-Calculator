@@ -3,4 +3,6 @@
     <string name="dividend">dividend</string>
     <string name="divisor">divisor</string>
     <string name="calculate">calculate</string>
+    <string name="number">number</string>
+    <string name="mod">mod</string>
 </resources>

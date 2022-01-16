@@ -10,14 +10,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         val calculate: Button = findViewById(R.id.result)
         calculate.setOnClickListener{
-            val divisorView: TextView = findViewById(R.id.divisor)
-            val dividendView: TextView = findViewById(R.id.dividend)
-            val divisor: Int = divisorView.text.toString().toInt()
-            val dividend: Int = dividendView.text.toString().toInt()
-            val result: String = (divisor % dividend).toString()
+            val numberView: TextView = findViewById(R.id.number)
+            val modView: TextView = findViewById(R.id.mod)
+            val number: Int = numberView.text.toString().toInt()
+            val mod: Int = modView.text.toString().toInt()
+            val result: String = (number % mod).toString()
             val duration = Toast.LENGTH_SHORT
             val toast = Toast.makeText(applicationContext, result, duration)
             toast.show()
