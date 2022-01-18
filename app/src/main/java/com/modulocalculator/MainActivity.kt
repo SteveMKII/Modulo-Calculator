@@ -31,17 +31,18 @@ class MainActivity : AppCompatActivity() {
 
 
     fun showResult(number: Int?, mod: Int?){
-        if (number !is Int){
-            Toast.makeText(applicationContext, "Please enter an integer for number",
+        when{
+            number !is Int -> Toast.makeText(applicationContext,
+                "Please enter an integer for number", Toast.LENGTH_SHORT).show()
+            mod !is Int ->             Toast.makeText(applicationContext,
+                "Please enter an integer for mod", Toast.LENGTH_SHORT).show()
+            mod == 0 -> Toast.makeText(applicationContext, "mod cannot be 0!",
                 Toast.LENGTH_SHORT).show()
-        }
-        else if (mod !is Int){
-            Toast.makeText(applicationContext, "Please enter an integer for mod",
-                Toast.LENGTH_SHORT).show()
-        }
-        else{
-            val result: String = (number % mod).toString()
-            Toast.makeText(applicationContext, result, Toast.LENGTH_LONG).show()
+            else -> {
+                val result: String = (number % mod).toString()
+                Toast.makeText(applicationContext, result,
+                    Toast.LENGTH_LONG).show()
+            }
         }
     }
 }
