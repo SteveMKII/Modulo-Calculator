@@ -41,9 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
         else{
             val result: String = (number % mod).toString()
-            val duration = Toast.LENGTH_SHORT
-            val toast = Toast.makeText(applicationContext, result, duration)
-            toast.show()
+            Toast.makeText(applicationContext, result, Toast.LENGTH_LONG).show()
         }
     }
 }
