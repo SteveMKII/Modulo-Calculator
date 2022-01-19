@@ -1,5 +1,6 @@
 package com.modulocalculator
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -44,6 +45,8 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG).show()
             }
         }
+        val intent = Intent(this, ResultActivity::class.java)
+        this.startActivity(intent)
     }
 }
 
