@@ -41,12 +41,12 @@ class MainActivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT).show()
             else -> {
                 val result: String = (number % mod).toString()
-                Toast.makeText(applicationContext, result,
-                    Toast.LENGTH_LONG).show()
+//                Toast.makeText(applicationContext, result, Toast.LENGTH_LONG).show()
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra("result", result)
+                this.startActivity(intent)
             }
         }
-        val intent = Intent(this, ResultActivity::class.java)
-        this.startActivity(intent)
     }
 }
 
